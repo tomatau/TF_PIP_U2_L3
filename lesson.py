@@ -1,10 +1,12 @@
 #!/usr/bin/env python3.4
+from datetime import datetime, timedelta
 
 class Lesson(object):
     """Lesson to be managed"""
     def __init__(self):
-        # super(Lesson, self).__init__()
-        pass
+        self_start = datetime
+        # self._dt = [("mon", "5pm")]
+        # self._notes = ""
 
     # def getCourses(self):
     #     return []
