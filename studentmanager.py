@@ -4,15 +4,15 @@ from student import Student
 class StudentManager():
     """Manage mentor students"""
     def __init__(self):
-        self.students = []
+        self._students = []
 
     def addStudent(self, student):
         if not isinstance(student, Student):
             raise ValueError('addStudent requires Student instance') 
-        self.students.append(student)
+        self._students.append(student)
 
     def getStudents(self):
-        return self.students
+        return self._students
 
 # add student (should be a student)
 #   add course to student

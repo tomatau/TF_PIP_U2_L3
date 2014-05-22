@@ -19,6 +19,6 @@ class TestSpec(unittest.TestCase):
     def test_addCourse_requires_Course_instance(self):
         course = Course()
         self.s.addCourse(course)
-    #     self.assertEquals(self.s.getCourses(), [course])
+        self.assertEquals([course], self.s.getCourses())
     #     with self.assertRaises(ValueError):
     #         self.s.addStudent('not an instance')
