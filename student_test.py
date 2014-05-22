@@ -20,5 +20,5 @@ class TestSpec(unittest.TestCase):
         course = Course()
         self.s.addCourse(course)
         self.assertEquals([course], self.s.getCourses())
-    #     with self.assertRaises(ValueError):
-    #         self.s.addStudent('not an instance')
+        with self.assertRaises(ValueError):
+            self.s.addStudent('not an instance')
