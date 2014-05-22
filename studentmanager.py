@@ -3,7 +3,6 @@ from student import Student
 
 class StudentManager():
     """Manage mentor students"""
-
     def __init__(self):
         self.students = []
 

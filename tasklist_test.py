@@ -7,16 +7,16 @@ class TestSpec(unittest.TestCase):
     def setUp(self):
         self.m = StudentManager()
 
-    def testStudentManagerGetStudents(self):
+    def test_getStudents(self):
         self.assertTrue(
             hasattr(self.m, "getStudents")
         )
 
-    def test_studentManager_getStudents_returns_empty_default(self):
+    def test_getStudents_returns_empty_default(self):
         students = self.m.getStudents()
         self.assertListEqual([], students)
 
-    def test_addStudent_require_Student_instance(self):
+    def test_addStudent_requires_Student_instance(self):
         student = Student()
         self.m.addStudent(student)
         self.assertEquals(self.m.getStudents(), [student])

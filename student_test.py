@@ -1,14 +1,24 @@
 #!/usr/bin/env python3.4
 import unittest
 from student import Student
+from course import Course
 
 class TestSpec(unittest.TestCase):
     def setUp(self):
-        self.m = Student()
+        self.s = Student()
 
-    def testAddStudentShouldRequireStudents(self):
-        student = Student()
-        self.m.addStudent(student)
-        self.assertEquals(self.m.getStudents(), [student])
-        with self.assertRaises(ValueError):
-            self.m.addStudent('not an instance')
+    def test_getCourses(self):
+        self.assertTrue(
+            hasattr(self.s, "getCourses")
+        )
+
+    def test_getCourses_returns_empty_default(self):
+        courses = self.s.getCourses()
+        self.assertListEqual([], courses)
+
+    def test_addCourse_requires_Course_instance(self):
+        course = Course()
+        self.s.addCourse(course)
+    #     self.assertEquals(self.s.getCourses(), [course])
+    #     with self.assertRaises(ValueError):
+    #         self.s.addStudent('not an instance')
