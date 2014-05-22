@@ -7,7 +7,7 @@ class Lesson(object):
         pass
 
     # def getCourses(self):
-    #     return [];
+    #     return []
 
 
 #   add course to student

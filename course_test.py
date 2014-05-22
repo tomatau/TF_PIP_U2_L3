@@ -11,9 +11,9 @@ class TestSpec(unittest.TestCase):
         lessons = self.c.getLessons()
         self.assertListEqual(lessons, [])
 
-    # def test_addCourse_requires_Course_instance(self):
-    #     course = Course()
-    #     self.c.addCourse(course)
-    #     self.assertEquals([course], self.c.getLessons())
-    #     with self.assertRaises(ValueError):
-    #         self.c.addCourse('not an instance')
+    def test_addLesson_requires_Lesson_instance(self):
+        lesson = Lesson()
+        self.c.addLesson(lesson)
+        self.assertEquals([lesson], self.c.getLessons())
+        with self.assertRaises(ValueError):
+            self.c.addLesson('not an instance')
