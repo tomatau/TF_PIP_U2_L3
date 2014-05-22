@@ -7,11 +7,6 @@ class TestSpec(unittest.TestCase):
     def setUp(self):
         self.s = Student()
 
-    def test_getCourses(self):
-        self.assertTrue(
-            hasattr(self.s, "getCourses")
-        )
-
     def test_getCourses_returns_empty_default(self):
         courses = self.s.getCourses()
         self.assertListEqual([], courses)

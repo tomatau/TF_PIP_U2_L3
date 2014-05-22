@@ -6,8 +6,8 @@ class Course(object):
         # super(Course, self).__init__()
         pass
 
-    # def getCourses():
-    #     return [];
+    def getLessons(self):
+        return [];
 
 
 #   add course to student

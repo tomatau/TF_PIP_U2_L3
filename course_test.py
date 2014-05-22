@@ -5,16 +5,15 @@ from lesson import Lesson
 
 class TestSpec(unittest.TestCase):
     def setUp(self):
-        self.s = Lesson()
+        self.c = Course()
 
-    # def test_getLessons(self):
-    #     self.assertTrue(
-    #         hasattr(self.s, "getLessons")
-    #     )
+    def test_getLessons_returns_empty_default(self):
+        lessons = self.c.getLessons()
+        self.assertListEqual(lessons, [])
 
-    # def test_addCourse_require_Course_instance(self):
-    #     course = course()
-    #     self.s.course(course)
-    #     self.assertEquals(self.s.courses(), [course])
+    # def test_addCourse_requires_Course_instance(self):
+    #     course = Course()
+    #     self.c.addCourse(course)
+    #     self.assertEquals([course], self.c.getLessons())
     #     with self.assertRaises(ValueError):
-    #         self.s.course('not an instance')
+    #         self.c.addCourse('not an instance')

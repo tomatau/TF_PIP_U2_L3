@@ -6,7 +6,7 @@ class Lesson(object):
         # super(Lesson, self).__init__()
         pass
 
-    # def getCourses():
+    # def getCourses(self):
     #     return [];
 
 
